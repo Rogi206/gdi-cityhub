@@ -1,3 +1,3 @@
 [build]  
-  command = "cd gdi-cityhub && npm run build"  
-  publish = "gdi-cityhub/.next" 
+  command = "npm run build"  
+  publish = ".next" 
