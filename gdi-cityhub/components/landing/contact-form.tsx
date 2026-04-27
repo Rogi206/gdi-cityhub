@@ -28,7 +28,9 @@ export function ContactForm() {
     
     const form = e.currentTarget
     const data = new FormData(form)
-    
+    const emailValue = data.get("email")
+    if (emailValue) data.append("_replyto", emailValue as string)
+
     try {
       const response = await fetch("https://formspree.io/f/xdayvygw", {
         method: "POST",
