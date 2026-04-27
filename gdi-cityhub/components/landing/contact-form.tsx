@@ -26,11 +26,23 @@ export function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    const form = e.currentTarget
+    const data = new FormData(form)
     
-    setIsSubmitting(false)
-    setSubmitted(true)
+    try {
+      const response = await fetch("https://formspree.io/f/xdayvygw", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" }
+      })
+      if (response.ok) {
+        setSubmitted(true)
+      }
+    } catch (error) {
+      console.error("Error al enviar el formulario", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (submitted) {
