@@ -52,7 +52,7 @@ pnpm lint         # ESLint
 | Componentes | Radix UI + shadcn/ui |
 | Formularios | React Hook Form + Zod |
 | Formulario de contacto | Formspree (`https://formspree.io/f/xdayvygw`) |
-| Deploy | Netlify + `@netlify/plugin-nextjs` |
+| Deploy | Vercel (proyecto: `rogi206s-projects/gdi-cityhub`) |
 | Analytics | Vercel Analytics (`@vercel/analytics`) |
 
 ## Convenciones
@@ -66,7 +66,8 @@ pnpm lint         # ESLint
 ## Notas Importantes
 
 - El código fuente de Next.js vive en el subdirectorio `gdi-cityhub/` dentro del repo.
-- El `netlify.toml` está en la raíz del repo; si se mueve el código fuente, actualizar `base`.
+- Desplegado en Vercel: https://gdi-cityhub.vercel.app — panel en https://vercel.com/rogi206s-projects/gdi-cityhub
+- El directorio raíz del proyecto en Vercel apunta a `gdi-cityhub/` (subdirectorio Next.js).
 - Las templates en `templates/*/config.js` son configuraciones estáticas para spinning up
   nuevas landing pages por vertical; no se importan desde el app de Next.js directamente.
 - El webhook handler (`scripts/webhook-handler.js`) requiere las variables de entorno
