@@ -20,7 +20,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="servicios" className="py-24 px-4 relative">
+    <section id="servicios" aria-label="Nuestros Servicios" className="py-24 px-4 relative">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
@@ -30,19 +30,18 @@ export function Services() {
             Soluciones digitales completas para impulsar tu negocio local
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="group relative p-6 rounded-xl bg-[#111111] border border-white/5 hover:border-[#3B82F6]/50 transition-all duration-500"
+            <div
+              key={index}
+              className="group relative p-6 rounded-xl bg-brand-surface border border-white/5 hover:border-brand-primary/50 transition-all duration-500"
             >
-              {/* Glow effect on hover */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-[#3B82F6]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-brand-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl bg-[#3B82F6]/10 border border-[#3B82F6]/20 flex items-center justify-center mb-5">
-                  <service.icon className="w-7 h-7 text-[#3B82F6]" />
+                <div className="w-14 h-14 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center mb-5">
+                  <service.icon className="w-7 h-7 text-brand-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-white/60 leading-relaxed">

@@ -29,7 +29,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="proceso" className="py-24 px-4">
+    <section id="proceso" aria-label="Como Trabajamos" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
@@ -39,25 +39,23 @@ export function Process() {
             Un proceso simple y transparente de principio a fin
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-4 gap-6 md:gap-4">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              {/* Connector line for desktop */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-gradient-to-r from-[#3B82F6]/50 to-transparent" />
+                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-gradient-to-r from-brand-primary/50 to-transparent" />
               )}
-              
+
               <div className="relative flex flex-col items-center text-center p-4">
-                {/* Step circle with glow */}
                 <div className="relative mb-5">
-                  <div className="absolute inset-0 bg-[#3B82F6]/30 rounded-full blur-xl" />
-                  <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#2563EB] flex items-center justify-center shadow-lg shadow-[#3B82F6]/30">
+                  <div className="absolute inset-0 bg-brand-primary/30 rounded-full blur-xl" />
+                  <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-brand-primary to-brand-primary-hover flex items-center justify-center shadow-lg shadow-brand-primary/30">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                
-                <span className="text-xs font-mono text-[#06B6D4] mb-2 tracking-widest">{step.number}</span>
+
+                <span className="text-xs font-mono text-brand-accent mb-2 tracking-widest">{step.number}</span>
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {step.title}
                 </h3>

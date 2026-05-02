@@ -25,10 +25,9 @@ const reasons = [
 
 export function WhyUs() {
   return (
-    <section id="nosotros" className="py-24 px-4 relative">
-      {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#3B82F6]/5 to-transparent" />
-      
+    <section id="nosotros" aria-label="Por que GDI CityHub" className="py-24 px-4 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-primary/5 to-transparent" />
+
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
@@ -38,12 +37,12 @@ export function WhyUs() {
             Nos diferenciamos por nuestra combinacion unica de tecnologia y cercania
           </p>
         </div>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => (
             <div key={index} className="text-center group">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#3B82F6]/20 to-[#06B6D4]/20 border border-[#3B82F6]/30 flex items-center justify-center mx-auto mb-5 group-hover:border-[#3B82F6]/60 transition-colors duration-300">
-                <reason.icon className="w-7 h-7 text-[#3B82F6]" />
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-brand-primary/20 to-brand-accent/20 border border-brand-primary/30 flex items-center justify-center mx-auto mb-5 group-hover:border-brand-primary/60 transition-colors duration-300">
+                <reason.icon className="w-7 h-7 text-brand-primary" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {reason.title}

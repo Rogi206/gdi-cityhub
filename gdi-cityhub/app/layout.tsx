@@ -56,6 +56,12 @@ export default function RootLayout({
   return (
     <html lang="es" className="bg-background">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-primary focus:text-white focus:rounded-md focus:text-sm focus:font-medium"
+        >
+          Saltar al contenido principal
+        </a>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
