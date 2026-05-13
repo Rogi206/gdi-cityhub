@@ -8,34 +8,34 @@ Servicios: páginas web profesionales, apps/MVPs y agentes IA automatizados.
 ## Estructura del Repositorio
 
 ```
-gdi-cityhub/                ← raíz del repositorio git
+gdi-cityhub/                ← raíz del repositorio git = app Next.js
 ├── CLAUDE.md               ← este archivo
 ├── README.md
-├── netlify.toml
+├── package.json
+├── next.config.mjs
+├── tsconfig.json
+├── app/
+├── components/
+│   └── landing/            ← Navbar, Hero, Services, WhyUs, Process, ContactForm, Footer
+├── hooks/
+├── lib/
+├── styles/
 ├── docs/
 │   ├── PROJECT.md
 │   ├── ROADMAP.md
 │   └── SOCIAL.md
 ├── scripts/
 │   ├── webhook-handler.js  ← procesa leads entrantes de Formspree
-│   └── deploy.sh           ← automatiza build + deploy a Netlify
-├── templates/              ← configs reutilizables por vertical de negocio
-│   ├── inmobiliaria/config.js
-│   ├── restauracion/config.js
-│   └── clinicas/config.js
-└── gdi-cityhub/            ← código fuente Next.js
-    ├── app/
-    ├── components/
-    │   └── landing/        ← Navbar, Hero, Services, WhyUs, Process, ContactForm, Footer
-    ├── hooks/
-    ├── lib/
-    └── styles/
+│   └── deploy.sh
+└── templates/              ← configs reutilizables por vertical de negocio
+    ├── inmobiliaria/config.js
+    ├── restauracion/config.js
+    └── clinicas/config.js
 ```
 
 ## Comandos de Desarrollo
 
 ```bash
-cd gdi-cityhub
 pnpm install      # instalar dependencias
 pnpm dev          # servidor en http://localhost:3000
 pnpm build        # build de producción
@@ -65,9 +65,8 @@ pnpm lint         # ESLint
 
 ## Notas Importantes
 
-- El código fuente de Next.js vive en el subdirectorio `gdi-cityhub/` dentro del repo.
 - Desplegado en Vercel: https://gdi-cityhub.vercel.app — panel en https://vercel.com/rogi206s-projects/gdi-cityhub
-- El directorio raíz del proyecto en Vercel apunta a `gdi-cityhub/` (subdirectorio Next.js).
+- El directorio raíz del proyecto en Vercel apunta a la raíz del repo (sin subdirectorio).
 - Las templates en `templates/*/config.js` son configuraciones estáticas para spinning up
   nuevas landing pages por vertical; no se importan desde el app de Next.js directamente.
 - El webhook handler (`scripts/webhook-handler.js`) requiere las variables de entorno
