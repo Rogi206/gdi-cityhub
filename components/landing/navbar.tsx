@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Servicios", id: "servicios" },
   { label: "Nosotros", id: "nosotros" },
   { label: "Proceso", id: "proceso" },
+  { label: "Precios", id: "precios" },
   { label: "Contacto", id: "contacto" },
 ]
 
