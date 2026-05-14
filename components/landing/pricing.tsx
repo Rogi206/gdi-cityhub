@@ -142,9 +142,10 @@ function PlanContent({ plan }: { plan: typeof plans[number] }) {
         onClick={() => scrollToSection("contacto")}
         className={`w-full py-3 rounded-xl font-semibold text-sm transition-all duration-300 cursor-pointer ${
           plan.highlighted
-            ? "bg-gradient-to-r from-brand-primary to-brand-accent text-white hover:opacity-90 shadow-lg shadow-brand-primary/25"
+            ? "text-white hover:opacity-90 shadow-lg shadow-blue-500/25"
             : "bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20"
         }`}
+        style={plan.highlighted ? { backgroundImage: "linear-gradient(to right, #3B82F6, #06B6D4)" } : undefined}
       >
         {plan.cta}
       </button>
