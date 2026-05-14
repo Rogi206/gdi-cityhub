@@ -116,8 +116,9 @@
   --color-brand-primary: #3B82F6;
   --color-brand-primary-hover: #2563EB;
   --color-brand-accent: #06B6D4;
-  --color-brand-bg: #0a0a0a;
-  --color-brand-surface: #111111;
+  --color-brand-purple: #8B5CF6;
+  --color-brand-bg: #03080f;
+  --color-brand-surface: #0b1628;
 }
 
 @layer base {
@@ -125,6 +126,11 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: #03080f;
+    background-image:
+      radial-gradient(ellipse 100% 55% at 50% -5%, rgba(59, 130, 246, 0.28) 0%, transparent 60%),
+      radial-gradient(ellipse 55% 45% at 88% 25%, rgba(139, 92, 246, 0.14) 0%, transparent 50%),
+      radial-gradient(ellipse 45% 35% at 8% 75%, rgba(6, 182, 212, 0.10) 0%, transparent 50%);
   }
 }
